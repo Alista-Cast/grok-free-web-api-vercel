@@ -4,6 +4,7 @@ import { fetchWithRetry } from "@/lib/grok-utils"
 
 // Grok API URL
 const GROK_API_URL = "https://grok.x.com/2/grok/add_response.json"
+export const maxDuration = 60; // This function can run for a maximum of 60 seconds
 
 export async function POST(request: NextRequest) {
   console.log(`Received request to ${request.nextUrl.pathname}`)
